@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 # Standard answers and internal state managed by Copier
-_commit: v2.4.1-31-ga07b85d
+_commit: v2.4.1-32-g54be23e
 _src_path: gh:ClausKlein/exemplar
 description: Short project description.
 maintainer: ClausKlein
