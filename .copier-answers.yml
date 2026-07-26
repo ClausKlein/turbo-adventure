@@ -4,7 +4,7 @@ _commit: v2.4.1-31-ga07b85d
 _src_path: gh:ClausKlein/exemplar
 description: Short project description.
 maintainer: ClausKlein
-minimum_cpp_build_version: '20'
+minimum_cpp_build_version: '26'
 paper: PnnnnRr
 project_name: my_project_name
 unit_test_library: gtest
