@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+# Standard answers and internal state managed by Copier
+_commit: v2.4.1-31-ga07b85d
+_src_path: gh:ClausKlein/exemplar
+description: Short project description.
+maintainer: your_github_username
+minimum_cpp_build_version: '20'
+paper: PnnnnRr
+project_name: my_project_name
+unit_test_library: gtest
+# Hidden variables manually tracked because 'when: false' omits them from _copier_answers
+generating_exemplar: false
+owner: "bemanproject"
+ci_tests_cron: "11 4 * * 4"
+pre_commit_update_cron: "28 21 * * 5"
