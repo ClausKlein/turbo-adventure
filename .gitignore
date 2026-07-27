@@ -1,8 +1,10 @@
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 /.cache
-/compile_commands.json
+/.init
+/CMakeUserPresets.json
 /build
+/compile_commands.json
 
 # ignore emacs temp files
 *~
