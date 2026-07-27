@@ -10,6 +10,20 @@ repos:
     -   id: check-yaml
     -   id: check-added-large-files
 
+    # https://copier.readthedocs.io/en/stable/updating/#preventing-commit-of-merge-conflicts
+    -   id: check-merge-conflict
+        args: [--assume-in-merge]
+
+    # NOTE: added recommented checks from:
+  - repo: local
+    hooks:
+    - id: forbidden-files
+      name: forbidden files
+      entry:
+        found Copier update rejection files; review and remove them before merging.
+      language: fail
+      files: "\\.rej$"
+
     # Clang-format for C++
     # This brings in a portable version of clang-format.
     # See also: https://github.com/ssciwr/clang-format-wheel
