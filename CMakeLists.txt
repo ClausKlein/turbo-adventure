@@ -21,7 +21,7 @@ if(NOT DEFINED CMAKE_CXX_STANDARD)
 endif()
 
 # Neither of these two are technically needed, but they make the expectation clear
-set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_EXTENSIONS ON) # NOTE: still needed for g++-13 with CXX26? CK
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # [CMAKE.SKIP_TESTS]
