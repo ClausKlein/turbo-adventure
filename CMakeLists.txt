@@ -8,7 +8,7 @@ project(
     beman.my_project_name
     DESCRIPTION "Short project description."
     LANGUAGES CXX
-    VERSION 0.1.0
+    VERSION 0.1.1
 )
 
 # ------------------------------------------------------------------------------
