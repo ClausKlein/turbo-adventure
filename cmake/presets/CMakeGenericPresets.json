@@ -1,0 +1,39 @@
+{
+  "version": 9,
+  "configurePresets": [
+    {
+      "name": "root-config",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "installDir": "$env{HOME}/.local",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": {
+          "type": "path",
+          "value": "$env{HOME}/.local"
+        },
+        "BEMAN_USE_MODULES": true,
+        "BEMAN_USE_STD_MODULE": true,
+        "BEMAN_MY_PROJECT_NAME_USE_MODULES": true,
+        "CMAKE_CXX_STANDARD": "23",
+        "CMAKE_CXX_EXTENSIONS": false,
+        "CMAKE_CXX_STANDARD_REQUIRED": true,
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+        "CMAKE_INSTALL_MESSAGE": "LAZY",
+        "CMAKE_SKIP_TEST_ALL_DEPENDENCY": false,
+        "CMAKE_PROJECT_TOP_LEVEL_INCLUDES": "${sourceDir}/infra/cmake/use-fetch-content.cmake"
+      },
+      "warnings": {
+        "dev": true,
+        "deprecated": true,
+        "uninitialized": true,
+        "unusedCli": true,
+        "systemVars": false
+      },
+      "errors": {
+        "dev": false,
+        "deprecated": true
+      }
+    }
+  ]
+}
