@@ -6,7 +6,7 @@ include(../infra/cmake/enable-experimental-import-std.cmake)
 project(beman.my_project_name.examples LANGUAGES CXX)
 
 if(PROJECT_IS_TOP_LEVEL)
-    find_package(beman.my_project_name 0.1.0 EXACT REQUIRED)
+    find_package(beman.my_project_name 0.1.1 EXACT REQUIRED)
 
     enable_testing()
 endif()

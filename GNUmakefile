@@ -8,12 +8,13 @@ MAKEFLAGS+= --warn-undefined-variables  # Warn when an undefined variable is ref
 ##################################################
 
 ifeq ($(origin CXX),default)
-  CXX:= g++-16
-  CC:= gcc-16
+  export CXX:= clang++-22
+  export CC:= clang-22
+  export CXXFLAGS:= -stdlib=libc++ -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0
 endif
 
 PRESET?=release
-IMAGE?=ghcr.io/bemanproject/infra-containers-gcc
+IMAGE?=ghcr.io/bemanproject/infra-containers-clang:22
 
 _build_path:=build/$(PRESET)
 
@@ -51,7 +52,7 @@ format: distclean  ## Format all files with pre-commit
 	pre-commit run --all
 
 dockerbuild: ## Start docker image interactive
-	docker run -it -v $(CURDIR):/home/builder/workdir $(IMAGE)
+	docker run -it -v $(CURDIR):/src $(IMAGE)
 
 # Helper targets
 .PHONY: env info
