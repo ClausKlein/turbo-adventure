@@ -8,8 +8,9 @@ MAKEFLAGS+= --warn-undefined-variables  # Warn when an undefined variable is ref
 ##################################################
 
 ifeq ($(origin CXX),default)
-  CXX:= clang++-22
-  CC:= clang-22
+  export CXX:= clang++-22
+  export CC:= clang-22
+  export CXXFLAGS:= -stdlib=libc++ -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0
 endif
 
 PRESET?=release
