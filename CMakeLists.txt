@@ -16,9 +16,9 @@ project(
 # library and its consumer, otherwise most toolchains will once again reject the
 # consumer's generated BMI.
 # ------------------------------------------------------------------------------
-if(NOT DEFINED CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 23)
-endif()
+# if(NOT DEFINED CMAKE_CXX_STANDARD)
+#     set(CMAKE_CXX_STANDARD 23)
+# endif()
 
 # Neither of these two are technically needed, but they make the expectation clear
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -82,7 +82,7 @@ if(BEMAN_MY_PROJECT_NAME_USE_MODULES)
     set_target_properties(beman.my_project_name PROPERTIES CXX_MODULE_STD ON)
     target_compile_features(
         beman.my_project_name
-        PUBLIC cxx_std_${CMAKE_CXX_STANDARD}
+        PUBLIC cxx_std_23
     )
 else()
     target_sources(
